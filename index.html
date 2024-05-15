@@ -5,26 +5,27 @@
         <meta name="viewport"content="width=device-width, incial-scale=1.0">
     </head>
 <body>
-    <h1>Prog</h1>
-    <p>primeiro te dará o valo e depois calculará a Bhaskará e daá os valores de x1 e x2."</p>
-    <script> 
-        var nome = window.prompt("Qual é seu nome?")
-        var quantidadeLetras = nome.length;
-        window.alert("Olá, seu nome tem: " +quantidadeLetras+ " letras.")
-        document.write("Olá, seu nome tem: " +quantidadeLetras)
-                     
-        var a = Number(window.prompt("Digite valor de a"))
-        var b = Number(window.prompt("Digite valor de b"))
-        var c = Number(window.prompt("Digite valor de c"))
-        
-        var delta = b * b - 4 * a * c
-            window.alert("O valor de delta é: " + delta)
-            document.write("O valor de delta é: " + delta)
-        
-        var x1 = (-b + (delta ** 0.5) / (2 * a))
-        var x2 = (-b - (delta ** 0.5) / (2 * a))
-            window.alert("Os resultados são: " + x1 + " e " + x2)
-            document.write("Os resultados são: " + x1 + " e " + x2 )
-   </script>
+    <h1>Olá, mundo!</h1>
+    <p>resultado aqui</p>
+    <p> aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div id="area" onclick="clicar()" onmosaenter="entrar()" onmouseout="sair()">Clique Aqui</div>
+ <script>
+     var a = document.getElementById('area')
+     function clicar(){
+         a.innerText = 'clicou!';
+        }
+
+     var b = document.getElementById('area')
+     function entrar(){
+            a.innerText = 'Entrou!';
+            a.style.backgroundColor = 'green';
+        }
+     var c = document.ElementById('area')
+     function sair(){
+            a.innerText = 'Saiu!';
+            a.style.backgroundColor = '#ccc';
+        }
+     
+ </script>
 </body>
 </html>
