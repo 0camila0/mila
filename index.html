@@ -3,45 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        #area {
-            background-color: blue;
-            color: yellow;
-            font: Arial;
-            height: 100px;
-            width: 200px;
-            text-align: center;
-            line-height: 100px;
-            border: 3px groove yellow;
-            position: relative;
-        }
-    </style>
+    <title> exercício </title>
 </head>
-<body>
-    <h1>Olá, mundo!</h1>
-    <p>resultado aqui</p>
-    <p> aprendendo a usar o <strong>DOM</strong> em JS</p>
-    <div id="area" onclick="clicar()" onmouseout="sair()" ontouchmove="moverTouch(event)">Clique Aqui</div>
-<script>
-     var a = document.getElementById('area');
-     
-     function clicar(){
-         a.innerText = 'clicou!';
-         a.style.backgroundColor = '#8B0000';
-     }
-
-     function sair(){
-         a.innerText = 'Saiu!';
-         a.style.backgroundColor = '#00CED1';
-       
-     }
-
-     function moverTouch(event) {
-         var touch = event.touches[0];
-         a.style.left = touch.clientX - 100 + 'px';
-         a.style.top = touch.clientY - 200 + 'px'; 
-         event.preventDefault();
-     }
-</script>        
+<body> 
+    <h1> atividade 1 </h1>
+    <p> Criar um programa que lê um valor dado pelo usuário e que faça uma soma caso seja ímpar ou subtração caso seja par. </p>
+    <input type="button" value="enter" onclick="validar()">
+    <div id="bar">RESPOSTA</div>
+    <script>
+        funcition validar(){
+            var n = document.getElementById('num')
+            var n1 = Numer(n.value)
+            var bar = document.getElementById('bar')
+            var n2 = n1%2 
+            IF (n2==0){
+                var rl=("par")
+                var r2=n1-10 
+                }
+            else {
+                var r1=("impar")
+                var r2=n1+10
+            }
+            bar.innerHtml="O NÚMERO DIGITADO É " +r1 + r2 
+        }  
+    </script>
 </body>
-</html>
+
+    
