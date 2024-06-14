@@ -1,33 +1,31 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> exercício </title>
-</head>
-<body> 
-    <h1> atividade 1 </h1>
-    <p> Criar um programa que lê um valor dado pelo usuário e que faça uma soma caso seja ímpar ou subtração caso seja par. </p>
-    <input type="button" value="enter" onclick="validar()">
-    <div id="bar">RESPOSTA</div>
-    <script>
-        function validar(){
-            var n = document.getElementById('num')
-            var n1 = Numer(n.value)
-            var bar = document.getElementById('bar')
-            var n2 = n1%2 
-            IF (n2==0){
-                var rl=("par")
-                var r2=n1-10 
-                }
-            else {
-                var r1=("impar")
-                var r2 =n1+10
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width, incial-scale=1.0">
+    </head>
+<body>
+        <h1> atividade 1 </h1>
+        <p> Criar um programa que lê um valor dado pelo usuario e que faça uma soma caso seja impar ou subtração caso seja par.</p>
+        <input id="num" type="number">Digite um numero
+        <input type="button" value="enter" onclick="validar()">
+        <div id="bar">RESPOSTA</div>
+        <script>
+            function valida(){
+                 var n = document.getElementById('num')
+                 var n1 = Numer(n.value)
+                 var bar = document.getElementById('bar')
+                 var n2 = n1%2
+                 if (n2==0){
+                     var r1=("par")
+                     var r2=n1-10
+                     }
+                 else {
+                     var r1=("impar")
+                     var r2 = n1+10
+                 }
+                 bar.innerHTML= O NUMERO DIGITADO É " +r1 +r2
             }
-            bar.innerHtml="O NÚMERO DIGITADO É " +r1 + r2 
-        }  
-    </script>
+         </script>
 </body>
 </html>
-
-    
