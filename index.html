@@ -1,31 +1,38 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"content="width=device-width, incial-scale=1.0">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome e Nacionalidade</title>
+</head>
 <body>
-        <h1> atividade 1 </h1>
-        <p> Criar um programa que lê um valor dado pelo usuario e que faça uma soma caso seja impar ou subtração caso seja par.</p>
-        <input id="num" type="number">Digite um numero
-        <input type="button" value="enter" onclick="validar()">
-        <div id="bar">RESPOSTA</div>
-        <script>
-            function valida(){
-                 var n = document.getElementById('num')
-                 var n1 = Numer(n.value)
-                 var bar = document.getElementById('bar')
-                 var n2 = n1%2
-                 if (n2==0){
-                     var r1=("par")
-                     var r2=n1-10
-                     }
-                 else {
-                     var r1=("impar")
-                     var r2 = n1+10
-                 }
-                 bar.innerHTML= O NUMERO DIGITADO É " +r1 +r2
-            }
-         </script>
+    <h1>Nome e Nacionalidade</h1>
+    <p>Digite seu nome:</p>
+    <input type="text" id="nome">
+    <br>
+    
+    <p>Digite seu país:</p>
+    <input type="text" id="pais">
+    <br>
+    
+    <button onclick="calcular()">Enviar</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            var nome = document.getElementById('nome').value.trim();
+            var pais = document.getElementById('pais').value.trim().toLowerCase();
+            var resultadoDiv = document.getElementById('resultado');
+            
+            if (nome && pais) {
+                if (pais === 'brasil' || pais === 'brazil') {
+                    resultadoDiv.textContent = "Seu nome é: " + nome + " e você é brasileiro(a).";
+                } else {
+                    resultadoDiv.textContent = "Seu nome é: " + nome + " e você é estrangeiro(a).";
+                }
+            } 
+        }
+    </script>
 </body>
 </html>
